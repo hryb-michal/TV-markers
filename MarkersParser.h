@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MARKERSPARSER_H_
+#define MARKERSPARSER_H_
 
 #include <vector>
 
@@ -11,3 +12,5 @@ public:
 	std::vector<Marker> parse();
 	void save(const std::vector<Marker>&);
 };
+
+#endif	// MARKERSPARSER_H_

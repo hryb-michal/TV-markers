@@ -5,14 +5,14 @@
 
 MarkerManager::MarkerManager()
 {
-	parser = new MarkersParser();
+	parser = std::make_unique<MarkersParser>();
 	markers = parser->parse();
 }
 
 
-string MarkerManager::getMarker(int i)
+std::string MarkerManager::getMarker(int i)
 {
-	stringstream stream;
+	std::stringstream stream;
 	Marker marker = markers.at(i);
 
 	stream << marker.type << " - ";

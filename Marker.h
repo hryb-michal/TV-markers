@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MARKER_H_
+#define MARKER_H_
 
 struct Position
 {
@@ -17,3 +18,5 @@ struct Marker
 
 	Position startPosition;
 };
+
+#endif	// MARKER_H_

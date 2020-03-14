@@ -4,7 +4,7 @@
 #include <sstream>
 #include <iostream>
 
-#define NUM_SAVED_MARKERS 8
+const int NUM_SAVED_MARKERS = 8;
 
 const char* SAVED_MARKERS[] = {
 // markerType	positionX	positionY	positionZ
@@ -34,7 +34,7 @@ std::vector<Marker> MarkersParser::parse()
 
 		int markerType;
 		stream >> markerType;
-		marker.type = (Marker::Type)markerType;
+		marker.type = static_cast<Marker::Type>(markerType);
 
 		stream >> marker.startPosition.x >> marker.startPosition.y >> marker.startPosition.z;
 		parsedMarkers.push_back(marker);

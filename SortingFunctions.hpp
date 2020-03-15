@@ -5,6 +5,8 @@
 #ifndef TV_MARKERS_SORTINGFUNCTIONS_HPP
 #define TV_MARKERS_SORTINGFUNCTIONS_HPP
 
+#include <cmath>
+
 namespace Sorting {
 
     float cartesian_distance(const Marker& marker){

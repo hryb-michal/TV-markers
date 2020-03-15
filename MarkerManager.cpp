@@ -3,8 +3,6 @@
 #include <sstream>
 #include <iostream>
 #include <algorithm>
-#include <cmath>
-#include <functional>
 
 #include "SortingFunctions.hpp"
 

@@ -5,7 +5,6 @@
 #ifndef TV_MARKERS_USERINTERFACE_HPP
 #define TV_MARKERS_USERINTERFACE_HPP
 
-#include <memory>
 #include "MarkerManager.h"
 
 class UserInterface {

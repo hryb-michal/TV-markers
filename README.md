@@ -1,6 +1,6 @@
 # TV-markers
 
-Application that displays the list of markers.
+Console application that displays the list of 3d markers and allows to edit it.
 
 List of commands:
 

@@ -4,7 +4,7 @@
 #include <iostream>
 #include <algorithm>
 
-#include "SortingFunctions.hpp"
+#include "SortingFunctions.h"
 
 auto current_distance_fn = Sorting::cartesian_distance;
 

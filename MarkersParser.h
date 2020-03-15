@@ -1,5 +1,5 @@
-#ifndef MARKERSPARSER_H_
-#define MARKERSPARSER_H_
+#ifndef TV_MARKERS_MARKERSPARSER_H_
+#define TV_MARKERS_MARKERSPARSER_H_
 
 #include <vector>
 
@@ -13,4 +13,4 @@ public:
 	void save(const std::vector<Marker>&);
 };
 
-#endif	// MARKERSPARSER_H_
+#endif	// TV_MARKERS_MARKERSPARSER_H_

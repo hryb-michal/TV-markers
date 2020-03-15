@@ -2,8 +2,8 @@
 // Created by mhryb on 3/15/20.
 //
 
-#ifndef TV_MARKERS_INPUTOPERATIONS_HPP
-#define TV_MARKERS_INPUTOPERATIONS_HPP
+#ifndef TV_MARKERS_INPUTOPERATIONS_H_
+#define TV_MARKERS_INPUTOPERATIONS_H_
 
 #include <iostream>
 #include <limits>
@@ -52,4 +52,4 @@ namespace InputOperations {
     }
 }
 
-#endif //TV_MARKERS_INPUTOPERATIONS_HPP
+#endif //TV_MARKERS_INPUTOPERATIONS_H_

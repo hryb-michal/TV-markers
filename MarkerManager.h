@@ -1,5 +1,5 @@
-#ifndef MARKER_MANAGER_H_
-#define MARKER_MANAGER_H_
+#ifndef TV_MARKERS_MARKER_MANAGER_H_
+#define TV_MARKERS_MARKER_MANAGER_H_
 
 #include <vector>
 #include <string>
@@ -31,4 +31,4 @@ private:
 	bool sorted {false};
 };
 
-#endif // MARKER_MANAGER_H_
+#endif // TV_MARKERS_MARKER_MANAGER_H_

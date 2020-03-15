@@ -2,7 +2,7 @@
 // Created by mhryb on 3/14/20.
 //
 
-#include "UserInterface.hpp"
+#include "UserInterface.h"
 
 #include <iostream>
 #include <string>

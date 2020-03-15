@@ -1,5 +1,5 @@
-#ifndef MARKER_H_
-#define MARKER_H_
+#ifndef TV_MARKERS_MARKER_H_
+#define TV_MARKERS_MARKER_H_
 
 struct Position
 {
@@ -29,4 +29,4 @@ struct Marker
 	Position startPosition;
 };
 
-#endif	// MARKER_H_
+#endif	// TV_MARKERS_MARKER_H_

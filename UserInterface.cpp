@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string>
 
-#include "InputOperations.hpp"
+#include "InputOperations.h"
 
 void UserInterface::list_options() {
     std::cout << "\nHere's list of all possible commands:\n";

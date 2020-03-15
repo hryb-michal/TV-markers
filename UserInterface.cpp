@@ -3,39 +3,31 @@
 //
 
 #include "UserInterface.hpp"
+
 #include <iostream>
 #include <string>
-#include <map>
 
-Marker marker_input(){
-    Marker marker;
-    std::cout << "Enter type and XYZ coordinates, separated by spaces:\n";
-    int input_type;
-    std::cin >> input_type >> marker.startPosition.x >> marker.startPosition.y >> marker.startPosition.z;   //TODO: input guards
-    marker.type = static_cast<Marker::Type>(input_type);
-    return marker;
-}
+#include "InputOperations.hpp"
 
 void UserInterface::list_options() {
+    std::cout << "\nHere's list of all possible commands:\n";
     std::cout << "add - provides input menu to add marker\n";
     std::cout << "display - displays all markers, sorted by closest to (0,0,0)\n";
     std::cout << "remove - provides input menu to remove marker\n";
     std::cout << "exit - closes the program\n";
     std::cout << "help - shows this message\n";
-
 }
+
 void UserInterface::run(){
         std::cout << "Welcome to Michal's Marker Manager(TM)\n";
         std::cout << "Whenever you feel lost, type \"help\".\n";
-        std::cout << "What do you want to do?\n";
-        list_options();
+        std::cout << "What do you want to do?\n> ";
 
         std::string action = "exit";
         while(true){
             std::cin >> action;
 
             if (action == "display") {
-                std::cout << "Current markers:\n";
                 marker_manager.displayAllMarkers();
             }
             else if(action == "exit") {
@@ -46,21 +38,31 @@ void UserInterface::run(){
                 list_options();
             }
             else if(action == "add"){
-                Marker marker = marker_input();
-                bool success = marker_manager.addMarker(marker);
-                success ? std::cout << "Operation successful!\n" : std::cout <<  "Operation failed! Possible memory shortage.\n";
+                try {
+                    Marker marker = InputOperations::marker_input();
+                    bool success = marker_manager.addMarker(marker);
+                    success ? std::cout << "Marker added!\n" : std::cout << "Operation failed! Possible memory shortage or bad marker format.\n";
+                }
+                catch (std::runtime_error& e) {
+                    std::cout << e.what() << std::endl;
+                }
             }
             else if(action == "remove"){
-                Marker marker = marker_input();
-                bool success = marker_manager.removeMarker(marker);
-                success ? std::cout << "Operation successful!\n" : std::cout <<  "Operation failed! Please double-check provided input.\n";
+                try{
+                    Marker marker = InputOperations::marker_input();
+                    bool success = marker_manager.removeMarker(marker);
+                    success ? std::cout << "Marker deleted!\n" : std::cout << "Operation failed! Please double-check provided input.\n";
+                }
+                catch (std::runtime_error& e) {
+                    std::cout << e.what() << std::endl;
+                }
             }
             else {
                 std::cout << "Sorry, unknown command. Try one of these instead:\n";
                 list_options();
             }
 
-            std::cout << "what do you want to do now?\n";
+            std::cout << "\nwhat do you want to do now?\n> ";
         }
 
 }

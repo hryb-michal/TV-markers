@@ -7,7 +7,8 @@
 #include "Marker.h"
 #include "UserInterface.hpp"
 
+
 int main() {
-    UserInterface user_interface;
-    user_interface.run();
+    UserInterface ui;
+    ui.run();
 }

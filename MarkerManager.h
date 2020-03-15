@@ -19,8 +19,11 @@ public:
 	std::string getMarker(int i);
 	int numMarkers();
 
+	bool isValidMarker(const Marker&);
 	bool addMarker(const Marker&);
 	bool removeMarker(const Marker&);
+
+	void sortMarkers();
 
 private:
 	std::unique_ptr<MarkersParser> parser;

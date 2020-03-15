@@ -20,10 +20,10 @@ struct Marker
 		return !(*this == other);
 	}
 
-	enum Type
+	enum class Type
 	{
-		ARROW,
-		DRAWING
+		ARROW = 0,
+		DRAWING = 1
 	} type;
 
 	Position startPosition;
